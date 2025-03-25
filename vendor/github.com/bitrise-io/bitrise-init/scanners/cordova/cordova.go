@@ -2,10 +2,11 @@ package cordova
 
 import (
 	"fmt"
+	"github.com/bitrise-io/bitrise-init/scanners/nodejs"
 	"path/filepath"
 	"strings"
 
-	envmanModels "github.com/bitrise-io/envman/models"
+	envmanModels "github.com/bitrise-io/envman/v2/models"
 
 	"github.com/bitrise-io/bitrise-init/models"
 	"github.com/bitrise-io/bitrise-init/scanners/android"
@@ -135,6 +136,7 @@ func (*Scanner) ExcludedScannerNames() []string {
 		string(ios.XcodeProjectTypeIOS),
 		string(ios.XcodeProjectTypeMacOS),
 		android.ScannerName,
+		nodejs.ScannerName,
 	}
 }
 
